@@ -1,0 +1,27 @@
+import PropTypes from "prop-types";
+
+let _Welcome;
+let _Result;
+_Result = PropTypes.shape({
+    "backdrop_path": PropTypes.string,
+    "first_air_date": PropTypes.string,
+    "genre_ids": PropTypes.arrayOf(PropTypes.number),
+    "id": PropTypes.number,
+    "name": PropTypes.string,
+    "origin_country": PropTypes.arrayOf(PropTypes.string),
+    "original_language": PropTypes.string,
+    "original_name": PropTypes.string,
+    "overview": PropTypes.string,
+    "popularity": PropTypes.number,
+    "poster_path": PropTypes.string,
+    "vote_average": PropTypes.number,
+    "vote_count": PropTypes.number,
+});
+_Welcome = PropTypes.shape({
+    "page": PropTypes.number,
+    "results": PropTypes.arrayOf(_Result),
+    "total_pages": PropTypes.number,
+    "total_results": PropTypes.number,
+});
+
+export const Welcome = _Welcome;
